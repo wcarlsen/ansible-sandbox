@@ -5,7 +5,9 @@
   - name: Install packages
     apt:
       state: latest
+      autoremove: yes
       pkg:
       - git
       - autojump
       - thefuck
+      - neovim
