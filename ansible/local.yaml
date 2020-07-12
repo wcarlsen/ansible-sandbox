@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   become: true
-  task:
+  tasks:
   - name: Install packages
     apt: name={{item}}
     with_items:
