@@ -3,14 +3,14 @@
   become: true
   tasks:
   - name: Install packages
-    apt: name={{item}}
-    with_items:
+    apt:
+      state: latest
+      pkg:
       - git
       - autojump
       - thefuck
   
   - name: Remove packages
-    apt: name={{item}}
-    state: absent
-    with_items:
-      - neovim
+    apt:
+      state: absent
+      name: neovim
