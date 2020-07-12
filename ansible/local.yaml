@@ -8,3 +8,9 @@
       - git
       - autojump
       - thefuck
+  
+  - name: Remove packages
+    apt: name={{item}}
+    state: absent
+    with_items:
+      - neovim
